@@ -18,6 +18,30 @@
 position = Vector2(2975, 1086)
 data = ExtResource("3_fank2")
 
+[node name="Asteroid6" parent="." instance=ExtResource("2_mxmhh")]
+position = Vector2(3439, 83)
+data = ExtResource("3_fank2")
+
+[node name="Asteroid7" parent="." instance=ExtResource("2_mxmhh")]
+position = Vector2(4847, 619)
+data = ExtResource("3_fank2")
+
+[node name="Asteroid8" parent="." instance=ExtResource("2_mxmhh")]
+position = Vector2(4407, 2027)
+data = ExtResource("3_fank2")
+
+[node name="Asteroid9" parent="." instance=ExtResource("2_mxmhh")]
+position = Vector2(4695, -413)
+data = ExtResource("3_fank2")
+
+[node name="Asteroid10" parent="." instance=ExtResource("2_mxmhh")]
+position = Vector2(2207, -613)
+data = ExtResource("3_fank2")
+
+[node name="Asteroid11" parent="." instance=ExtResource("2_mxmhh")]
+position = Vector2(3263, -1365)
+data = ExtResource("3_fank2")
+
 [node name="Asteroid2" parent="." instance=ExtResource("2_mxmhh")]
 position = Vector2(2308, 711)
 data = ExtResource("4_jsub5")

@@ -38,10 +38,10 @@ func _on_health_damaged(_amount: int) -> void:
 func _on_health_died() -> void:
 	if is_shiny and data.gem_drop:
 		for i in data.n_gem_drops:
-			spawn_pickup(data.gem_drop)
+			spawn_pickup.call_deferred(data.gem_drop)
 	elif not is_shiny and data.ore_drop:
 		for i in data.n_ore_drops:
-			spawn_pickup(data.ore_drop)
+			spawn_pickup.call_deferred(data.ore_drop)
 	
 	queue_free()
 
@@ -50,6 +50,5 @@ func spawn_pickup(item_data: ItemData) -> void:
 	var current_scene: Node = get_tree().current_scene
 	var pickup: Pickup = PICKUP_SCENE.instantiate()
 	pickup.item_data = item_data
-	await get_tree().process_frame
 	current_scene.add_child(pickup)
 	pickup.global_position = global_position

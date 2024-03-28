@@ -133,6 +133,7 @@ texture = ExtResource("5_tpdir")
 
 [node name="HitArea" type="Area2D" parent="."]
 collision_layer = 0
+collision_mask = 17
 
 [node name="CollisionShape" type="CollisionShape2D" parent="HitArea"]
 position = Vector2(109, 0)

@@ -150,9 +150,11 @@ debug={
 
 [layer_names]
 
+2d_physics/layer_1="default"
 2d_physics/layer_2="projectile"
 2d_physics/layer_3="pickup"
 2d_physics/layer_4="player"
+2d_physics/layer_5="shootable"
 
 [rendering]
 

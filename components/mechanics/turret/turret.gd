@@ -3,43 +3,59 @@ extends Sprite2D
 
 const PROJECTILE_SCENE: PackedScene = preload("uid://bhpuqbiokova")
 
-var rotate_speed: float = 3.0
-var sight_range: float = 800.0
+@export_flags_2d_physics var sight_mask: int
+@export_flags_2d_physics var shoot_mask: int
 
-@onready var point: Marker2D = $Point
+var current_target: Node
+var current_target_position: Vector2
+
+var rotate_speed: float = 3.0
+var sight_range: float = 1200.0
+
+@onready var spawn_point: Marker2D = $SpawnPoint
 @onready var cooldown_timer: Timer = $Cooldown
 
 
 func _physics_process(delta: float) -> void:
-	var nearby: Array[MathUtility.RayIntersection] = MathUtility.circular_raycast(get_world_2d().direct_space_state,
-		global_position, sight_range)
+	var space_state: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
+	var intersections: Array[MathUtility.RayIntersection] = MathUtility.circular_raycast(space_state,
+		global_position, sight_range, sight_mask)
 	
-	var nearest_distance: float = INF
+	var nearest_target: Node = null
 	var nearest_position: Vector2 = Vector2.INF
+	var nearest_distance: float = INF
+	var current_target_still_in_sight: bool = false
 	
-	for intersection in nearby:
-		if not intersection.obj is Deposit:
+	for intersection in intersections:
+		if not (intersection.collider.collision_layer & shoot_mask):
 			continue
+		
+		if current_target and intersection.collider == current_target:
+			current_target_still_in_sight = true
+			break
 		
 		var d: float = (intersection.pos - global_position).length()
 		if d >= nearest_distance:
 			continue
 		
+		nearest_target = intersection.collider
 		nearest_position = intersection.pos
 		nearest_distance = d
 	
-	var deposit_found: bool = nearest_distance < INF
+	if not current_target_still_in_sight:
+		current_target = nearest_target
+		current_target_position = nearest_position
 	
-	if not deposit_found:
+	if not current_target:
 		return
 	
-	var target_rotation: float = (nearest_position - global_position).angle() + PI / 2.0
+	var target_rotation: float = (current_target_position - global_position).angle() + PI / 2.0
 	global_rotation = rotate_toward(global_rotation, target_rotation, rotate_speed * delta)
 	
-	if not cooldown_timer.is_stopped() or not deposit_found:
+	if not cooldown_timer.is_stopped():
 		return
 	
-	spawn_projectile(point.global_position)
+	spawn_projectile(spawn_point.global_position)
 	cooldown_timer.start()
 
 

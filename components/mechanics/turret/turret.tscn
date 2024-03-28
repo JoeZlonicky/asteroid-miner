@@ -7,8 +7,10 @@
 texture = ExtResource("1_2qkib")
 offset = Vector2(0, -32)
 script = ExtResource("1_iwng4")
+sight_mask = 17
+shoot_mask = 16
 
-[node name="Point" type="Marker2D" parent="."]
+[node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(0, -119)
 
 [node name="Cooldown" type="Timer" parent="."]

@@ -2,12 +2,12 @@ class_name MathUtility
 
 
 class RayIntersection:
-	var obj: Object
+	var collider: CollisionObject2D
 	var pos: Vector2
 	
-	func _init(p_obj: Object, p_position: Vector2):
-		self.obj = p_obj
-		self.pos = p_position
+	func _init(p_collider: Node, p_position: Vector2) -> void:
+		collider = p_collider
+		pos = p_position
 
 
 static func circular_raycast(space_state: PhysicsDirectSpaceState2D, position: Vector2, 

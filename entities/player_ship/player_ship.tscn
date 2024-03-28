@@ -10,7 +10,7 @@
 bounce = 0.5
 
 [node name="Ship" type="RigidBody2D"]
-collision_layer = 9
+collision_layer = 8
 physics_material_override = SubResource("PhysicsMaterial_ea5mh")
 gravity_scale = 0.0
 script = ExtResource("1_75lbg")
