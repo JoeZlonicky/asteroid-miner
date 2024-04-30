@@ -1,10 +1,10 @@
 shader_type canvas_item;
 
-uniform vec4 bg_color: source_color = vec4(0.0, 0.0, 0.0, 1.0);
+uniform vec4 bg_color: source_color = vec4(vec3(0.0), 1.0);
 uniform vec4 star_color : source_color = vec4(1.0);
 
 uniform float star_size: hint_range(1.0, 10.0) = 1.0;
-uniform float star_density: hint_range(0.0, 1.0) = 0.5;
+uniform float star_density: hint_range(0.0, 0.3) = 0.05;
 uniform float star_twinkle_speed: hint_range(0.0, 10.0) = 5.0;
 
 uniform vec2 camera_offset;
@@ -16,7 +16,7 @@ float random_value(vec2 v) {
 
 void fragment() {
 	vec2 pos = floor((FRAGCOORD.xy + camera_offset) / star_size);
-	float chance = 1.0 - pow(star_density, 2.0) * 0.05;
+	float chance = 1.0 - pow(star_density, 2.0);
 	if (random_value(pos) > chance) {
 		// Need a different random value so it isn't just the values > chance
 		float r = random_value(pos + 1.0);

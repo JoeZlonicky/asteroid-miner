@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cf2yjm70xnmi3"]
-
-[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="1_k85pl"]
-
-[node name="StandardLabel" type="Label"]
-theme_override_fonts/font = ExtResource("1_k85pl")
-theme_override_font_sizes/font_size = 64
-text = "Label"

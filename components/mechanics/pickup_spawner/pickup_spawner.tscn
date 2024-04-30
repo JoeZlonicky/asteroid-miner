@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgv1junxrsj3a"]
-
-[ext_resource type="Script" path="res://components/mechanics/pickup_spawner/pickup_spawner.gd" id="1_1cf6q"]
-
-[node name="PickupSpawner" type="Marker2D"]
-script = ExtResource("1_1cf6q")

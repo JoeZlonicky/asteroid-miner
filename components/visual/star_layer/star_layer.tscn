@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnjtkkgogsyj8"]
+[gd_scene load_steps=4 format=3 uid="uid://dnjtkkgogsyj8"]
 
-[ext_resource type="Material" uid="uid://dgxlpdqb33bd5" path="res://common/shader_materials/static_stars.tres" id="1_morni"]
+[ext_resource type="Shader" path="res://common/shaders/stars.gdshader" id="1_loifb"]
 [ext_resource type="Script" path="res://components/visual/star_layer/star_layer.gd" id="2_qhu6y"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_44ydc"]
+shader = ExtResource("1_loifb")
+shader_parameter/bg_color = Color(0.0627451, 0.0784314, 0.121569, 1)
+shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.501961)
+shader_parameter/star_size = 2.0
+shader_parameter/star_density = 0.07
+shader_parameter/star_twinkle_speed = 5.0
+shader_parameter/camera_offset = null
+
 [node name="StarLayer" type="ColorRect"]
-material = ExtResource("1_morni")
+material = SubResource("ShaderMaterial_44ydc")
 custom_minimum_size = Vector2(3840, 2160)
 anchors_preset = 15
 anchor_right = 1.0

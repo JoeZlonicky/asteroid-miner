@@ -5,7 +5,7 @@ extends RefCounted
 var move_speed: float = 650.0
 var rotation_speed: float = 10.0
 
-var _last_input_direction: Vector2 = Vector2.ZERO
+var last_input_direction: Vector2 = Vector2.ZERO
 
 
 func update(character: CharacterBody2D, input: Vector2, delta: float) -> void:
@@ -23,10 +23,10 @@ func process_velocity(character: CharacterBody2D, input_vector: Vector2, _delta:
 
 func process_rotation(character: CharacterBody2D, input_vector: Vector2, delta: float) -> void:
 	if input_vector:
-		_last_input_direction = input_vector.normalized()
+		last_input_direction = input_vector.normalized()
 	
-	if not _last_input_direction:
+	if not last_input_direction:
 		return
 	
-	character.rotation = rotate_toward(character.rotation, _last_input_direction.angle() + PI / 2.0,
+	character.rotation = rotate_toward(character.rotation, last_input_direction.angle() + PI / 2.0,
 		rotation_speed * delta)

@@ -1,6 +1,7 @@
 class_name Pickup
 extends CharacterBody2D
 
+
 const DEFAULT_DRIFT_SPEED: float = 20.0
 
 @export var item_data: ItemData

@@ -1,35 +1,44 @@
-[gd_scene load_steps=6 format=3 uid="uid://cac3tpqtq4fos"]
+[gd_scene load_steps=7 format=3 uid="uid://cac3tpqtq4fos"]
 
 [ext_resource type="PackedScene" uid="uid://dnjtkkgogsyj8" path="res://components/visual/star_layer/star_layer.tscn" id="2_nkseg"]
 [ext_resource type="Shader" path="res://common/shaders/stars.gdshader" id="2_vjobg"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b5m5m"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dbhys"]
+shader = ExtResource("2_vjobg")
+shader_parameter/bg_color = Color(0.0627451, 0.0784314, 0.121569, 1)
+shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.501961)
+shader_parameter/star_size = 2.0
+shader_parameter/star_density = 0.07
+shader_parameter/star_twinkle_speed = 5.0
+shader_parameter/camera_offset = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_soqyj"]
 resource_local_to_scene = true
 shader = ExtResource("2_vjobg")
 shader_parameter/bg_color = Color(0, 0, 0, 0)
 shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.619608)
 shader_parameter/star_size = 3.0
-shader_parameter/star_density = 0.32
+shader_parameter/star_density = 0.044
 shader_parameter/star_twinkle_speed = 4.0
 shader_parameter/camera_offset = null
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3dpl"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vfeqi"]
 resource_local_to_scene = true
 shader = ExtResource("2_vjobg")
 shader_parameter/bg_color = Color(0, 0, 0, 0)
 shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.564706)
 shader_parameter/star_size = 5.0
-shader_parameter/star_density = 0.2
+shader_parameter/star_density = 0.02
 shader_parameter/star_twinkle_speed = 4.0
 shader_parameter/camera_offset = null
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_n28bf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u5vka"]
 resource_local_to_scene = true
 shader = ExtResource("2_vjobg")
 shader_parameter/bg_color = Color(0, 0, 0, 0)
 shader_parameter/star_color = Color(0.772549, 0.772549, 0.772549, 0.45098)
 shader_parameter/star_size = 7.0
-shader_parameter/star_density = 0.198
+shader_parameter/star_density = 0.043
 shader_parameter/star_twinkle_speed = 0.0
 shader_parameter/camera_offset = null
 
@@ -37,23 +46,24 @@ shader_parameter/camera_offset = null
 layer = -1
 
 [node name="StaticStars" parent="." instance=ExtResource("2_nkseg")]
+material = SubResource("ShaderMaterial_dbhys")
 offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="FarStars" parent="." instance=ExtResource("2_nkseg")]
-material = SubResource("ShaderMaterial_b5m5m")
+material = SubResource("ShaderMaterial_soqyj")
 offset_right = 0.0
 offset_bottom = 0.0
 parallax_strength = 0.025
 
 [node name="MediumStars" parent="." instance=ExtResource("2_nkseg")]
-material = SubResource("ShaderMaterial_i3dpl")
+material = SubResource("ShaderMaterial_vfeqi")
 offset_right = 0.0
 offset_bottom = 0.0
 parallax_strength = 0.1
 
 [node name="CloseStars" parent="." instance=ExtResource("2_nkseg")]
-material = SubResource("ShaderMaterial_n28bf")
+material = SubResource("ShaderMaterial_u5vka")
 offset_right = 0.0
 offset_bottom = 0.0
 parallax_strength = 1.0

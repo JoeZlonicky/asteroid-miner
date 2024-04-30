@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxootfqdi7tqi"]
 
 [ext_resource type="Texture2D" uid="uid://bw2p50umj44xd" path="res://entities/space_station/space_station.svg" id="2_q0lng"]
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="3_em2nk"]
 [ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://components/mechanics/interactable_area/interactable_area.tscn" id="3_vhmlw"]
-[ext_resource type="PackedScene" uid="uid://cf2yjm70xnmi3" path="res://components/ui/standard_label/standard_label.tscn" id="4_713yj"]
 
 [node name="SpaceStation" type="StaticBody2D"]
 collision_layer = 3
@@ -13,11 +13,10 @@ texture = ExtResource("2_q0lng")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-1014, -441, -906, -443, -900, -559, -864, -591, -738, -587, -700, -553, -700, -441, -316, -443, -312, -465, -274, -503, 100, -499, 142, -471, 146, -441, 582, -441, 622, -409, 624, -189, 774, -197, 774, -313, 806, -337, 874, -335, 906, -305, 912, -199, 1018, -193, 1050, -165, 1054, -63, 1010, -29, 912, -25, 916, 81, 876, 113, 808, 117, 776, 75, 772, -21, 626, -27, 619, 217, 583, 244, 467, 247, 472, 336, 643, 335, 686, 376, 686, 433, 649, 466, 471, 475, 469, 568, 435, 591, 127, 597, 86, 563, 86, 470, -75, 470, -114, 438, -112, 374, -82, 340, 88, 340, 86, 247, -698, 253, -700, 401, -741, 436, -866, 431, -905, 399, -903, 249, -1014, 251, -1053, 215, -1052, -399)
 
-[node name="InteractableArea" parent="." node_paths=PackedStringArray("_toggle_visibility") instance=ExtResource("3_vhmlw")]
+[node name="InteractableArea" parent="." instance=ExtResource("3_vhmlw")]
 position = Vector2(-87, -545)
-_toggle_visibility = NodePath("StandardLabel")
 
-[node name="StandardLabel" parent="InteractableArea" instance=ExtResource("4_713yj")]
+[node name="StandardLabel" type="Label" parent="InteractableArea"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -29,5 +28,7 @@ offset_right = 125.0
 offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_em2nk")
+theme_override_font_sizes/font_size = 64
 text = "Dock (E)"
 metadata/_edit_use_anchors_ = true

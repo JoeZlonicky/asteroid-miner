@@ -9,6 +9,7 @@ var max_value: int
 var current: int
 var is_dead: bool = false
 
+
 func _init(p_max_value: int) -> void:
 	max_value = p_max_value
 	current = max_value
