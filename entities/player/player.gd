@@ -1,4 +1,4 @@
-class_name PlayerShip
+class_name Player
 extends RigidBody2D
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgiop2yu368ym"]
+[gd_scene load_steps=11 format=3 uid="uid://bgiop2yu368ym"]
 
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://components/visual/space_background/space_background.tscn" id="1_wms5o"]
 [ext_resource type="PackedScene" uid="uid://b87x1kykkcd8m" path="res://entities/asteroid/asteroid.tscn" id="2_mxmhh"]
@@ -9,65 +9,71 @@
 [ext_resource type="Resource" uid="uid://b1w5dnoy0vf3r" path="res://data/asteroids/cobalt_asteroid/cobalt_asteroid.tres" id="5_ddbkd"]
 [ext_resource type="Resource" uid="uid://dc38l1aga5ino" path="res://data/asteroids/palladium_asteroid/palladium_asteroid.tres" id="6_5qqt1"]
 [ext_resource type="Resource" uid="uid://dhw1mgoy547lq" path="res://data/asteroids/iridium_asteroid/iridium_asteroid.tres" id="7_aeqq6"]
+[ext_resource type="PackedScene" uid="uid://bqwjbla6phgxm" path="res://screens/hud/hud.tscn" id="10_eq4bo"]
 
 [node name="Space" type="Node2D"]
 
 [node name="SpaceBackground" parent="." instance=ExtResource("1_wms5o")]
 
-[node name="Asteroid" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroids" type="Node2D" parent="."]
+
+[node name="Asteroid" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(2975, 1086)
 data = ExtResource("3_fank2")
 
-[node name="Asteroid6" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid6" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(3439, 83)
 data = ExtResource("3_fank2")
 
-[node name="Asteroid7" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid7" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(4847, 619)
 data = ExtResource("3_fank2")
 
-[node name="Asteroid8" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid8" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(4407, 2027)
 data = ExtResource("3_fank2")
 
-[node name="Asteroid9" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid9" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(4695, -413)
 data = ExtResource("3_fank2")
 
-[node name="Asteroid10" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid10" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(2207, -613)
 data = ExtResource("3_fank2")
 
-[node name="Asteroid11" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid11" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(3263, -1365)
 data = ExtResource("3_fank2")
 
-[node name="Asteroid2" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid2" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(2308, 711)
 data = ExtResource("4_jsub5")
 
-[node name="Asteroid3" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid3" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(1603, 521)
 data = ExtResource("5_ddbkd")
 
-[node name="Asteroid4" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid4" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(962, 686)
 data = ExtResource("6_5qqt1")
 
-[node name="Asteroid5" parent="." instance=ExtResource("2_mxmhh")]
+[node name="Asteroid5" parent="Asteroids" instance=ExtResource("2_mxmhh")]
 position = Vector2(435, 1136)
 data = ExtResource("7_aeqq6")
 
 [node name="SpaceStation" parent="." instance=ExtResource("4_3gghn")]
 position = Vector2(1834, 2754)
 
-[node name="Ship" parent="." instance=ExtResource("4_1tx2m")]
+[node name="Player" parent="." instance=ExtResource("4_1tx2m")]
 position = Vector2(1746, 1873)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Ship"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
 update_rotation = false
 update_scale = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1746, 1873)
+
+[node name="HUD" parent="." node_paths=PackedStringArray("player") instance=ExtResource("10_eq4bo")]
+player = NodePath("../Player")
