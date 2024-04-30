@@ -16,7 +16,7 @@ func _on_visibility_changed() -> void:
 
 func refresh() -> void:
 	var i: int = 0
-	for item: ItemData in inventory.get_items():
+	for item: ItemData in inventory.items:
 		var slot: InventorySlot = grid_container.get_child(i)
 		slot.item_sprite.texture = item.sprite
 		slot.count_label.text = str(inventory.get_item_count(item))

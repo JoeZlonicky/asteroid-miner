@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://entities/pickup/pickup.gd" id="1_16hjh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8ol58"]
-radius = 11.0454
+radius = 31.0161
 
-[node name="Pickup" type="CharacterBody2D"]
+[node name="Pickup" type="RigidBody2D"]
 z_index = -1
 collision_layer = 4
-collision_mask = 0
+gravity_scale = 0.0
 script = ExtResource("1_16hjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
