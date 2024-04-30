@@ -33,11 +33,6 @@ window/vsync/vsync_mode=0
 
 project/assembly_name="Asteroid Miner"
 
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
-
 [file_customization]
 
 folder_colors={
