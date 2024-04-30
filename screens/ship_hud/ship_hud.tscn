@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cii8xrotmv763"]
 
 [ext_resource type="Script" path="res://screens/ship_hud/ship_hud.gd" id="1_fix6o"]
-[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common_assets/fonts/chakra_petch_regular.ttf" id="1_utbo1"]
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="1_utbo1"]
 
 [node name="ShipHUD" type="CanvasLayer"]
 script = ExtResource("1_fix6o")

@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Session="*res://session/session.gd"
+Session="*res://global/session.gd"
 
 [debug]
 
@@ -37,18 +37,23 @@ window/vsync/vsync_mode=0
 
 project/assembly_name="Asteroid Miner"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [file_customization]
 
 folder_colors={
-"res://common_assets/": "orange",
-"res://components/": "yellow",
-"res://data/": "green",
-"res://dev/": "teal",
-"res://entities/": "blue",
+"res://addons/": "gray",
+"res://common/": "red",
+"res://components/": "orange",
+"res://data/": "yellow",
+"res://dev/": "green",
+"res://entities/": "teal",
+"res://global/": "blue",
 "res://levels/": "purple",
-"res://screens/": "pink",
-"res://session/": "red",
-"res://static_scripts/": "gray"
+"res://screens/": "pink"
 }
 
 [filesystem]

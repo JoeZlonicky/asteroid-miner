@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bbvwmowb7u1ii"]
 
 [ext_resource type="PackedScene" uid="uid://dnjtkkgogsyj8" path="res://components/visual/star_layer/star_layer.tscn" id="1_ownoi"]
-[ext_resource type="Shader" path="res://common_assets/shaders/stars.gdshader" id="2_x5cnn"]
+[ext_resource type="Shader" path="res://common/shaders/stars.gdshader" id="2_x5cnn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_avtnh"]
 resource_local_to_scene = true

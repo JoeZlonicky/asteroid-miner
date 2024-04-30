@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://xmo4ookofai8" path="res://components/ui/menu_panel/panel.tscn" id="1_2aney"]
 [ext_resource type="Script" path="res://components/ui/inventory_slot/inventory_slot.gd" id="2_dal35"]
-[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common_assets/fonts/chakra_petch_regular.ttf" id="3_0x8g1"]
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="3_0x8g1"]
 
 [node name="InventorySlot" instance=ExtResource("1_2aney")]
 custom_minimum_size = Vector2(128, 128)

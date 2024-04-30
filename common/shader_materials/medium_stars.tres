@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://qhv0a1tdyool"]
+
+[ext_resource type="Shader" path="res://common/shaders/stars.gdshader" id="1_1uehr"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_1uehr")
+shader_parameter/bg_color = Color(0, 0, 0, 0)
+shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.564706)
+shader_parameter/star_size = 5.0
+shader_parameter/star_density = 0.2
+shader_parameter/star_twinkle_speed = 4.0
+shader_parameter/camera_offset = null

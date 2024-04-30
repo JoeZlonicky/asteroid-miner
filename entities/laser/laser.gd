@@ -4,7 +4,9 @@ extends CharacterBody2D
 
 const SPEED: float = 2400.0
 
-@onready var explosion_animator: AnimationPlayer = $Explosion/AnimationPlayer
+@export var hit_explosion_scene: PackedScene
+
+@onready var explosion_point: Node2D = $ExplosionPoint
 
 
 func fire(g_position: Vector2, angle: float, bonus_speed: float = 0.0) -> void:
@@ -24,5 +26,13 @@ func _on_lifespan_timeout() -> void:
 func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body is Deposit:
 		body.health.take_damage(1)
-	set_physics_process(false)
-	explosion_animator.play("explode")
+	if hit_explosion_scene:
+		spawn_explosion.call_deferred()
+		
+	queue_free()
+
+
+func spawn_explosion() -> void:
+	var hit_explosion: Node2D = hit_explosion_scene.instantiate()
+	get_tree().current_scene.add_child(hit_explosion)
+	hit_explosion.global_position = explosion_point.global_position

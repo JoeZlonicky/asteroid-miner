@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bexehsklkaj8i"]
 
 [ext_resource type="Script" path="res://entities/deposit/deposit.gd" id="1_b205w"]
-[ext_resource type="Shader" path="res://common_assets/shaders/flash.gdshader" id="2_emjut"]
+[ext_resource type="Shader" path="res://common/shaders/flash.gdshader" id="2_emjut"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lam7f"]
 resource_local_to_scene = true
