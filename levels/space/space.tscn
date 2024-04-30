@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://components/visual/space_background/space_background.tscn" id="1_wms5o"]
 [ext_resource type="PackedScene" uid="uid://b87x1kykkcd8m" path="res://entities/asteroid/asteroid.tscn" id="2_mxmhh"]
 [ext_resource type="Resource" uid="uid://ds853gw1v6wue" path="res://data/asteroids/iron_asteroid/iron_asteroid.tres" id="3_fank2"]
-[ext_resource type="PackedScene" uid="uid://2cs02ipd30sh" path="res://entities/player_ship/player_ship.tscn" id="4_1tx2m"]
+[ext_resource type="PackedScene" uid="uid://2cs02ipd30sh" path="res://entities/player/player.tscn" id="4_1tx2m"]
 [ext_resource type="PackedScene" uid="uid://cxootfqdi7tqi" path="res://entities/space_station/space_station.tscn" id="4_3gghn"]
 [ext_resource type="Resource" uid="uid://200dfdor8fbs" path="res://data/asteroids/nitrogen_asteroid/nitrogen_asteroid.tres" id="4_jsub5"]
 [ext_resource type="Resource" uid="uid://b1w5dnoy0vf3r" path="res://data/asteroids/cobalt_asteroid/cobalt_asteroid.tres" id="5_ddbkd"]
