@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://clydoun60iql"]
+[gd_scene load_steps=4 format=3 uid="uid://clydoun60iql"]
 
 [ext_resource type="Texture2D" uid="uid://cfa0rqe0pepwy" path="res://components/mechanics/turret/turret.svg" id="1_2qkib"]
 [ext_resource type="Script" path="res://components/mechanics/turret/turret.gd" id="1_iwng4"]
+
+[sub_resource type="Gradient" id="Gradient_d1v2x"]
+colors = PackedColorArray(0.521569, 0.188235, 0.188235, 1, 0.854902, 0.52549, 0.243137, 1)
 
 [node name="Turret" type="Sprite2D"]
 texture = ExtResource("1_2qkib")
@@ -10,9 +13,13 @@ script = ExtResource("1_iwng4")
 sight_mask = 17
 shoot_mask = 16
 
-[node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(0, -119)
+[node name="EndPoint" type="Marker2D" parent="."]
+position = Vector2(0, -101)
 
-[node name="Cooldown" type="Timer" parent="."]
+[node name="Laser" type="Line2D" parent="."]
+points = PackedVector2Array(-1, -53, 0, -240)
+gradient = SubResource("Gradient_d1v2x")
+
+[node name="CooldownTimer" type="Timer" parent="."]
 wait_time = 0.25
 one_shot = true

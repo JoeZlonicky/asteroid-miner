@@ -21,7 +21,7 @@ func _physics_process(_delta: float) -> void:
 		var direction: Vector2 = (global_position - body.global_position).normalized()
 		body.apply_force(direction * force)
 		
-		var correction = direction - body.linear_velocity.normalized()
+		var correction: Vector2 = direction - body.linear_velocity.normalized()
 		body.apply_force(correction * correction_force)
 
 
