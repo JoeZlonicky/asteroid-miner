@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mpl7tkap7nm8"
-path="res://.godot/imported/dark_panel.svg-a41c9716720e265bcc92831dd0b87eb3.ctex"
+uid="uid://bjnibtykc0pdx"
+path="res://.godot/imported/inventory_panel.svg-882202ff8cadf0f4e35da4f6a0cee2be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/ui/inventory_slot/dark_panel.svg"
-dest_files=["res://.godot/imported/dark_panel.svg-a41c9716720e265bcc92831dd0b87eb3.ctex"]
+source_file="res://components/ui/inventory_panel/inventory_panel.svg"
+dest_files=["res://.godot/imported/inventory_panel.svg-882202ff8cadf0f4e35da4f6a0cee2be.ctex"]
 
 [params]
 

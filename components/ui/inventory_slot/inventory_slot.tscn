@@ -1,28 +1,40 @@
 [gd_scene load_steps=4 format=3 uid="uid://iirycnvbok0a"]
 
-[ext_resource type="PackedScene" uid="uid://xmo4ookofai8" path="res://components/ui/menu_panel/panel.tscn" id="1_2aney"]
+[ext_resource type="Texture2D" uid="uid://cmma6cn38ur8v" path="res://components/ui/inventory_slot/inventory_slot.svg" id="1_vtspm"]
 [ext_resource type="Script" path="res://components/ui/inventory_slot/inventory_slot.gd" id="2_dal35"]
 [ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="3_0x8g1"]
 
-[node name="InventorySlot" instance=ExtResource("1_2aney")]
-custom_minimum_size = Vector2(128, 128)
+[node name="InventorySlot" type="NinePatchRect"]
+custom_minimum_size = Vector2(196, 196)
+offset_left = 1159.0
+offset_top = 798.0
 offset_right = 1207.0
 offset_bottom = 846.0
+texture = ExtResource("1_vtspm")
+patch_margin_left = 34
+patch_margin_top = 34
+patch_margin_right = 34
+patch_margin_bottom = 34
 script = ExtResource("2_dal35")
 
-[node name="ItemSprite" type="TextureRect" parent="." index="0"]
+[node name="ItemSprite" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 32.0
+offset_right = -34.0
+offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CountLabel" type="Label" parent="." index="1"]
+[node name="CountLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 112.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_0x8g1")

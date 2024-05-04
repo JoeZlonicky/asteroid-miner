@@ -13,7 +13,7 @@ func _ready() -> void:
 	if player == null:
 		return
 	
-	inventory_panel.inventory = player.inventory
+	inventory_panel.set_inventory(player.inventory)
 
 
 func _input(event: InputEvent) -> void:

@@ -26,9 +26,13 @@ layout_mode = 2
 
 [node name="InventoryPanel" parent="." instance=ExtResource("3_obcqt")]
 visible = false
-offset_left = 1028.0
-offset_top = 712.0
-offset_right = 1561.0
-offset_bottom = 1376.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 84.0
+offset_top = -582.0
+offset_right = 1075.0
+offset_bottom = 582.0
+grow_vertical = 2
 
 [node name="SpeedLabel" parent="." instance=ExtResource("4_x6jg4")]

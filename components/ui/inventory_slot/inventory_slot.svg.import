@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgto1s47fc1fb"
-path="res://.godot/imported/menu_panel.svg-02e9c4c31ac0b7321c5d1041a7234a47.ctex"
+uid="uid://cmma6cn38ur8v"
+path="res://.godot/imported/inventory_slot.svg-3255c2bc930957317935fb6f9df5171a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/ui/menu_panel/menu_panel.svg"
-dest_files=["res://.godot/imported/menu_panel.svg-02e9c4c31ac0b7321c5d1041a7234a47.ctex"]
+source_file="res://components/ui/inventory_slot/inventory_slot.svg"
+dest_files=["res://.godot/imported/inventory_slot.svg-3255c2bc930957317935fb6f9df5171a.ctex"]
 
 [params]
 
