@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw2p50umj44xd"
-path="res://.godot/imported/space_station.svg-55889ae30c219c8b4899b88fcb34be2c.ctex"
+uid="uid://rtbi2hd4pnfp"
+path="res://.godot/imported/asteroid_hub.svg-8ca2c5107e0298ca0f21ec0b9b6f2aa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/space_station/space_station.svg"
-dest_files=["res://.godot/imported/space_station.svg-55889ae30c219c8b4899b88fcb34be2c.ctex"]
+source_file="res://entities/asteroid_hub/asteroid_hub.svg"
+dest_files=["res://.godot/imported/asteroid_hub.svg-8ca2c5107e0298ca0f21ec0b9b6f2aa5.ctex"]
 
 [params]
 

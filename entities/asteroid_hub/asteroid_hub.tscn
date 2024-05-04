@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0df746anea2p"]
+
+[ext_resource type="Texture2D" uid="uid://rtbi2hd4pnfp" path="res://entities/asteroid_hub/asteroid_hub.svg" id="1_gnpav"]
+
+[node name="AsteroidHub" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gnpav")
+
+[node name="RightCollisionPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(176, 136, 338, -872, 633, -1238, 694, -1566, 970, -1709, 1327, -1586, 1651, -1115, 2031, -915, 2264, -458, 2155, 51, 2231, 460, 1964, 793, 1979, 1188, 1603, 1454, 1398, 1839, 870, 1835, 528, 1573, 24, 1730, -676, 2092, -547, 1378, -252, 978, -138, 574)
+
+[node name="LeftCollisionPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-279, -447, -266, -3, -508, 372, -641, 810, -1003, 1274, -1289, 1959, -1435, 1794, -1689, 1712, -1847, 1254, -1739, 854, -1854, 486, -2114, 340, -2266, 10, -2146, -517, -2146, -993, -1778, -1152, -1397, -1419, -1257, -1793, -901, -2092, -431, -1977, -31, -2073, 153, -1730, 223, -1419, -95, -955)
