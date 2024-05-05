@@ -19,7 +19,8 @@ func set_inventory(new_inventory: Inventory) -> void:
 
 func refresh() -> void:
 	var i: int = 0
-	for item: ItemData in _inventory.items:
+	var items: Dictionary = _inventory.items if _inventory != null else {}
+	for item: ItemData in items:
 		var slot: InventorySlot = grid_container.get_child(i)
 		slot.item_sprite.texture = item.sprite
 		slot.count_label.text = str(_inventory.get_item_count(item))
@@ -35,6 +36,8 @@ func _on_visibility_changed() -> void:
 	if not visible:
 		return
 	
+	if not is_node_ready():
+		await ready
 	refresh()
 
 

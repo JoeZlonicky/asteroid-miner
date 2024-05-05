@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://c1smggllhihgd"]
+
+[ext_resource type="Script" path="res://data/dialogue/dialogue_data.gd" id="1_ji5ei"]
+
+[resource]
+script = ExtResource("1_ji5ei")
+character_name = "Orin"
+text = Array[String](["Hello there!", "It's quite peaceful out here, isn't it?", "Plenty of stars to keep me company."])

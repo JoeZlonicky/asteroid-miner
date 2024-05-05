@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://caj6sed5n17fw"]
+
+[ext_resource type="Texture2D" uid="uid://bdtklbriu5hj3" path="res://common/art/nine_patch_rect.svg" id="1_geemf"]
+[ext_resource type="Script" path="res://components/ui/inventory/panel/inventory_panel.gd" id="2_nvf1w"]
+[ext_resource type="PackedScene" uid="uid://iirycnvbok0a" path="res://components/ui/inventory/slot/inventory_slot.tscn" id="4_djma4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sovkl"]
+texture = ExtResource("1_geemf")
+texture_margin_left = 34.0
+texture_margin_top = 34.0
+texture_margin_right = 34.0
+texture_margin_bottom = 34.0
+
+[node name="InventoryPanel" type="PanelContainer"]
+offset_left = 1159.0
+offset_top = 383.0
+offset_right = 2103.0
+offset_bottom = 1547.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_sovkl")
+script = ExtResource("2_nvf1w")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 24
+columns = 4
+
+[node name="InventorySlot" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="MarginContainer/GridContainer" instance=ExtResource("4_djma4")]
+layout_mode = 2
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

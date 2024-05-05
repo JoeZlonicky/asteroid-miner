@@ -1,15 +1,21 @@
 class_name Player
 extends RigidBody2D
 
-
+var preoccupied: bool = false  # E.g. in dialogue
 var inventory := Inventory.new()
 var movement_controller := ShipMovementController.new()
 
+@onready var turret: Turret = $Turret
 @onready var left_trail: GPUParticles2D = $Thrusters/LeftTrail
 @onready var right_trail: GPUParticles2D = $Thrusters/RightTrail
 
 
 func _physics_process(delta: float) -> void:
+	turret.is_active = not preoccupied
+	if preoccupied:
+		movement_controller.update(self, Vector2.UP, delta)  # Slow down
+		return
+	
 	var input: Vector2 = Input.get_vector("ship_left", "ship_right", "ship_slow", "ship_forward")
 	movement_controller.update(self, input, delta)
 	

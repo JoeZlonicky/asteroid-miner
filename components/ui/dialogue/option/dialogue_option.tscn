@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://crgmgfi24ubli"]
+
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="1_y4b50"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1o7e"]
+bg_color = Color(0.0436877, 0.066322, 0.0974434, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxt0s"]
+bg_color = Color(0.136257, 0.179553, 0.239088, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcrax"]
+bg_color = Color(0.0159437, 0.0261987, 0.0451193, 1)
+
+[node name="DialogueOption" type="Button"]
+theme_override_fonts/font = ExtResource("1_y4b50")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_f1o7e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qxt0s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jcrax")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qxt0s")
+text = "Option 1"

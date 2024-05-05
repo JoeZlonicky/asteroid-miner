@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bgiop2yu368ym"]
+[gd_scene load_steps=13 format=3 uid="uid://bgiop2yu368ym"]
 
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://components/visual/space_background/space_background.tscn" id="1_wms5o"]
 [ext_resource type="PackedScene" uid="uid://b87x1kykkcd8m" path="res://entities/asteroid/asteroid.tscn" id="2_mxmhh"]
@@ -10,6 +10,8 @@
 [ext_resource type="Resource" uid="uid://dhw1mgoy547lq" path="res://data/asteroids/iridium_asteroid/iridium_asteroid.tres" id="7_aeqq6"]
 [ext_resource type="PackedScene" uid="uid://b0df746anea2p" path="res://entities/asteroid_hub/asteroid_hub.tscn" id="10_134df"]
 [ext_resource type="PackedScene" uid="uid://bqwjbla6phgxm" path="res://screens/hud/hud.tscn" id="10_eq4bo"]
+[ext_resource type="PackedScene" uid="uid://c7aiiq0spj3ny" path="res://entities/npc/npc.tscn" id="11_6ytlx"]
+[ext_resource type="Resource" uid="uid://c1smggllhihgd" path="res://data/dialogue/test/test.tres" id="12_ci0oq"]
 
 [node name="Space" type="Node2D"]
 
@@ -77,3 +79,10 @@ position = Vector2(1746, 1873)
 
 [node name="HUD" parent="." node_paths=PackedStringArray("player") instance=ExtResource("10_eq4bo")]
 player = NodePath("../Player")
+
+[node name="Orin" parent="." instance=ExtResource("11_6ytlx")]
+show_behind_parent = true
+position = Vector2(876, 1981)
+dialogue_data = ExtResource("12_ci0oq")
+
+[connection signal="dialogue_started" from="Orin" to="HUD" method="start_dialogue"]

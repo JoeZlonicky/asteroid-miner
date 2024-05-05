@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbahvbi4k5mw"]
+
+[ext_resource type="Script" path="res://components/ui/dialogue/panel/dialogue_panel.gd" id="1_d5taq"]
+[ext_resource type="Texture2D" uid="uid://bdtklbriu5hj3" path="res://common/art/nine_patch_rect.svg" id="1_l41bj"]
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="3_e2fc1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c1ip0"]
+texture = ExtResource("1_l41bj")
+texture_margin_left = 34.0
+texture_margin_top = 34.0
+texture_margin_right = 34.0
+texture_margin_bottom = 34.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3mdc2"]
+texture = ExtResource("1_l41bj")
+texture_margin_left = 34.0
+texture_margin_top = 34.0
+texture_margin_right = 34.0
+texture_margin_bottom = 34.0
+
+[node name="DialoguePanel" type="PanelContainer"]
+custom_minimum_size = Vector2(2165, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1082.0
+offset_top = -168.0
+offset_right = 1083.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_c1ip0")
+script = ExtResource("1_d5taq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 34
+theme_override_constants/margin_right = 34
+theme_override_constants/margin_bottom = 34
+
+[node name="Sections" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="TextLabel" type="Label" parent="MarginContainer/Sections"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2029, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_e2fc1")
+theme_override_font_sizes/font_size = 64
+text = "Hello world"
+autowrap_mode = 3
+
+[node name="Options" type="VBoxContainer" parent="MarginContainer/Sections"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="."]
+show_behind_parent = true
+layout_mode = 2
+
+[node name="NameContainer" type="PanelContainer" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -5.0
+offset_top = -166.0
+offset_right = 703.0
+offset_bottom = -14.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3mdc2")
+
+[node name="NameLabel" type="Label" parent="Control/NameContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_e2fc1")
+theme_override_font_sizes/font_size = 64
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VisibleCharactersTick" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="VisibleCharactersTick" to="." method="_on_visible_characters_tick_timeout"]

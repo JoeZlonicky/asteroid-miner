@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://iirycnvbok0a"]
 
-[ext_resource type="Texture2D" uid="uid://cmma6cn38ur8v" path="res://components/ui/inventory_slot/inventory_slot.svg" id="1_vtspm"]
-[ext_resource type="Script" path="res://components/ui/inventory_slot/inventory_slot.gd" id="2_dal35"]
+[ext_resource type="Texture2D" uid="uid://bdtklbriu5hj3" path="res://common/art/nine_patch_rect.svg" id="1_7euel"]
+[ext_resource type="Script" path="res://components/ui/inventory/slot/inventory_slot.gd" id="2_dal35"]
 [ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="3_0x8g1"]
 
 [node name="InventorySlot" type="NinePatchRect"]
@@ -10,7 +10,7 @@ offset_left = 1159.0
 offset_top = 798.0
 offset_right = 1207.0
 offset_bottom = 846.0
-texture = ExtResource("1_vtspm")
+texture = ExtResource("1_7euel")
 patch_margin_left = 34
 patch_margin_top = 34
 patch_margin_right = 34

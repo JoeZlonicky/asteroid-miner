@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqwjbla6phgxm"]
+[gd_scene load_steps=6 format=3 uid="uid://bqwjbla6phgxm"]
 
 [ext_resource type="Script" path="res://screens/hud/hud.gd" id="1_0gp02"]
 [ext_resource type="PackedScene" uid="uid://bnryjyjuyc6jk" path="res://components/ui/notification_container/notification_container.tscn" id="2_4i780"]
-[ext_resource type="PackedScene" uid="uid://caj6sed5n17fw" path="res://components/ui/inventory_panel/inventory_panel.tscn" id="3_obcqt"]
+[ext_resource type="PackedScene" uid="uid://caj6sed5n17fw" path="res://components/ui/inventory/panel/inventory_panel.tscn" id="3_obcqt"]
 [ext_resource type="PackedScene" uid="uid://bqu1loiyiuj5q" path="res://components/ui/speed_label/speed_label.tscn" id="4_x6jg4"]
+[ext_resource type="PackedScene" uid="uid://dbahvbi4k5mw" path="res://components/ui/dialogue/panel/dialogue_panel.tscn" id="5_i2o44"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_0gp02")
@@ -24,15 +25,38 @@ theme_override_constants/margin_bottom = 30
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="InventoryPanel" parent="." instance=ExtResource("3_obcqt")]
-visible = false
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 84.0
-offset_top = -582.0
-offset_right = 1075.0
-offset_bottom = 582.0
-grow_vertical = 2
-
 [node name="SpeedLabel" parent="." instance=ExtResource("4_x6jg4")]
+
+[node name="InventoryPanel" parent="." instance=ExtResource("3_obcqt")]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1247.0
+offset_top = -582.0
+offset_right = -303.0
+offset_bottom = 582.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="DialoguePanel" parent="VBoxContainer/MarginContainer" instance=ExtResource("5_i2o44")]
+unique_name_in_owner = true
+layout_mode = 2

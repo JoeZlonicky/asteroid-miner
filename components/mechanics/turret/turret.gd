@@ -1,3 +1,4 @@
+class_name Turret
 extends Sprite2D
 
 
@@ -5,6 +6,8 @@ const EXPLOSION_SCENE: PackedScene = preload("uid://cysq5jcic27uu")
 
 @export_flags_2d_physics var sight_mask: int
 @export_flags_2d_physics var shoot_mask: int
+
+var is_active: bool = false
 
 var current_target: Node
 var current_target_position: Vector2
@@ -27,6 +30,8 @@ func _physics_process(delta: float) -> void:
 	global_rotation = independent_rotation
 	
 	laser.hide()
+	if not is_active:
+		return
 	
 	var space_state: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
 	var intersections: Array[MathUtility.RayIntersection] = MathUtility.circular_raycast(space_state,

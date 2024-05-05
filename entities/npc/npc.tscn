@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7aiiq0spj3ny"]
+
+[ext_resource type="Script" path="res://entities/npc/npc.gd" id="1_0lfp7"]
+[ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://components/mechanics/interactable_area/interactable_area.tscn" id="1_gsa1b"]
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://common/fonts/chakra_petch_regular.ttf" id="3_irlgr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u3yaw"]
+radius = 400.0
+
+[node name="NPC" type="Node2D"]
+script = ExtResource("1_0lfp7")
+
+[node name="InteractableArea" parent="." node_paths=PackedStringArray("toggle_visibility") instance=ExtResource("1_gsa1b")]
+toggle_visibility = NodePath("../Label")
+
+[node name="CollisionShape2D" parent="InteractableArea" index="0"]
+shape = SubResource("CircleShape2D_u3yaw")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = -103.0
+offset_top = -154.0
+offset_right = 103.0
+offset_bottom = -70.0
+theme_override_fonts/font = ExtResource("3_irlgr")
+theme_override_font_sizes/font_size = 64
+text = "Talk (E)"
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 0.117647)
+polygon = PackedVector2Array(0, -400, 103, -386, 200, -347, 284, -284, 350, -200, 383, -105, 399, 0, 389, 103, 346, 202, 282, 285, 206, 342, 107, 385, -1, 399, -106, 386, -202, 348, -284, 286, -348, 198, -385, 106, -401, 1, -387, -102, -349, -203, -279, -283, -201, -347, -104, -388)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, -400, 103, -386, 200, -347, 284, -284, 350, -200, 383, -105, 399, 0, 389, 103, 346, 202, 282, 285, 206, 342, 107, 385, -1, 399, -106, 386, -202, 348, -284, 286, -348, 198, -385, 106, -401, 1, -387, -102, -349, -203, -279, -283, -201, -347, -104, -388)
+closed = true
+
+[connection signal="interacted_with" from="InteractableArea" to="." method="_on_interactable_area_interacted_with"]
+
+[editable path="InteractableArea"]
