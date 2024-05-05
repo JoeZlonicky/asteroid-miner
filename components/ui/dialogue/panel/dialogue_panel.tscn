@@ -55,6 +55,9 @@ theme_override_fonts/font = ExtResource("3_e2fc1")
 theme_override_font_sizes/font_size = 64
 text = "Hello world"
 autowrap_mode = 3
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = -0.0126582
 
 [node name="Options" type="VBoxContainer" parent="MarginContainer/Sections"]
 layout_mode = 2
@@ -80,6 +83,7 @@ theme_override_font_sizes/font_size = 64
 text = "Name"
 horizontal_alignment = 1
 vertical_alignment = 1
+visible_characters_behavior = 1
 
 [node name="VisibleCharactersTick" type="Timer" parent="."]
 wait_time = 0.05

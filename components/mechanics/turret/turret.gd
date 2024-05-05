@@ -14,7 +14,7 @@ var current_target_position: Vector2
 
 var independent_rotation: float = 0.0
 var rotate_speed: float = 3.0
-var sight_range: float = 1200.0
+var sight_range: float = 800.0
 var allowed_angle_difference_to_hit: float = 0.001
 
 @onready var end_point: Marker2D = $EndPoint
