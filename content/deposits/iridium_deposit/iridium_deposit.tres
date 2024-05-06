@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DepositData" load_steps=5 format=3 uid="uid://go2e5gmv8hr4"]
+
+[ext_resource type="Script" path="res://content/deposits/deposit_data.gd" id="1_n73d2"]
+[ext_resource type="Resource" uid="uid://bh1thpwu4jn5c" path="res://content/items/gems/emerald/emerald.tres" id="1_qxkf8"]
+[ext_resource type="Resource" uid="uid://b824pcuy6a6l3" path="res://content/items/ores/iridium/iridium.tres" id="2_m1st5"]
+[ext_resource type="Texture2D" uid="uid://b3owleccjqhgm" path="res://content/deposits/iridium_deposit/iridium_deposit.svg" id="2_wtt2u"]
+
+[resource]
+script = ExtResource("1_n73d2")
+sprite = ExtResource("2_wtt2u")
+collision = PackedVector2Array(-23, -43, -1, -63, 26, -40, 53, -47, 61, -29, 62, -10, 81, -8, 91, 11, 58, 52, 16, 48, -18, 25, -53, 46, -91, 5, -73, -60, -45, -59)
+gem_chance = 0.1
+ore_drop = ExtResource("2_m1st5")
+gem_drop = ExtResource("1_qxkf8")
+n_ore_drops = 5
+n_gem_drops = 1

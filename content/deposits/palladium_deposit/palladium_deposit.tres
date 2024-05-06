@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DepositData" load_steps=5 format=3 uid="uid://qx6o1k73fcqe"]
+
+[ext_resource type="Resource" uid="uid://ddplnk38g0glo" path="res://content/items/gems/amethyst/amethyst.tres" id="1_scpn3"]
+[ext_resource type="Script" path="res://content/deposits/deposit_data.gd" id="1_ts00u"]
+[ext_resource type="Resource" uid="uid://dxeqfak3dsdyf" path="res://content/items/ores/palladium/palladium.tres" id="2_fcvw2"]
+[ext_resource type="Texture2D" uid="uid://5vtobfvb2f7w" path="res://content/deposits/palladium_deposit/palladium_deposit.svg" id="2_olo8y"]
+
+[resource]
+script = ExtResource("1_ts00u")
+sprite = ExtResource("2_olo8y")
+collision = PackedVector2Array(-47, -36, -36, -45, 3, -58, 18, -41, 36, -39, 54, -42, 64, -20, 65, -3, 86, 6, 80, 29, 57, 55, -25, 48, -90, 8, -84, -25, -71, -43)
+gem_chance = 0.1
+ore_drop = ExtResource("2_fcvw2")
+gem_drop = ExtResource("1_scpn3")
+n_ore_drops = 5
+n_gem_drops = 1

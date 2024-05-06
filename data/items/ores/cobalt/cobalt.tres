@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bau71eukom6we"]
-
-[ext_resource type="Script" path="res://data/items/item_data.gd" id="1_0uslc"]
-[ext_resource type="Texture2D" uid="uid://hl3apsk7j63x" path="res://data/items/ores/cobalt/cobalt.svg" id="2_t7mst"]
-
-[resource]
-script = ExtResource("1_0uslc")
-name = "Cobalt"
-sprite = ExtResource("2_t7mst")

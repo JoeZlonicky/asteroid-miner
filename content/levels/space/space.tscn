@@ -1,0 +1,126 @@
+[gd_scene load_steps=16 format=3 uid="uid://bgiop2yu368ym"]
+
+[ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://components/visual/space_background/space_background.tscn" id="1_lk2qp"]
+[ext_resource type="PackedScene" uid="uid://b87x1kykkcd8m" path="res://entities/asteroid/asteroid.tscn" id="2_isa1j"]
+[ext_resource type="Resource" uid="uid://ds853gw1v6wue" path="res://content/asteroids/iron_asteroid/iron_asteroid.tres" id="3_cqks5"]
+[ext_resource type="Resource" uid="uid://200dfdor8fbs" path="res://content/asteroids/nitrogen_asteroid/nitrogen_asteroid.tres" id="4_fu7lf"]
+[ext_resource type="Resource" uid="uid://b1w5dnoy0vf3r" path="res://content/asteroids/cobalt_asteroid/cobalt_asteroid.tres" id="5_7wn01"]
+[ext_resource type="Resource" uid="uid://dc38l1aga5ino" path="res://content/asteroids/palladium_asteroid/palladium_asteroid.tres" id="6_5gn24"]
+[ext_resource type="Resource" uid="uid://dhw1mgoy547lq" path="res://content/asteroids/iridium_asteroid/iridium_asteroid.tres" id="7_8agse"]
+[ext_resource type="PackedScene" uid="uid://c7aiiq0spj3ny" path="res://entities/npc/npc.tscn" id="8_fqnu4"]
+[ext_resource type="Script" path="res://content/dialogue/orin/orin.gd" id="9_a1ot8"]
+[ext_resource type="Script" path="res://content/dialogue/xatar/xatar.gd" id="10_ee01e"]
+[ext_resource type="Script" path="res://content/dialogue/lexa/lexa.gd" id="11_fs2qa"]
+[ext_resource type="Script" path="res://content/dialogue/raez/raez.gd" id="12_5kpwv"]
+[ext_resource type="PackedScene" uid="uid://b0df746anea2p" path="res://entities/asteroid_hub/asteroid_hub.tscn" id="13_0ly4n"]
+[ext_resource type="PackedScene" uid="uid://2cs02ipd30sh" path="res://entities/player/player.tscn" id="14_1xtwa"]
+[ext_resource type="PackedScene" uid="uid://bqwjbla6phgxm" path="res://screens/hud/hud.tscn" id="15_1xi25"]
+
+[node name="Space" type="Node2D"]
+
+[node name="SpaceBackground" parent="." instance=ExtResource("1_lk2qp")]
+
+[node name="Asteroids" type="Node2D" parent="."]
+
+[node name="Asteroid" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(3568, 1027)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid6" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(3541, -70)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid7" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(-1291, 1355)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid8" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(4407, 2027)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid9" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(5457, 552)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid15" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(-2830, 4439)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid10" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(2207, -613)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid16" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(-2278, 2719)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid11" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(4972, 4978)
+data = ExtResource("3_cqks5")
+
+[node name="Asteroid2" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(5010, 3231)
+data = ExtResource("4_fu7lf")
+
+[node name="Asteroid14" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(-9, 7780)
+data = ExtResource("4_fu7lf")
+
+[node name="Asteroid3" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(1603, 521)
+data = ExtResource("5_7wn01")
+
+[node name="Asteroid4" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(942, -332)
+data = ExtResource("6_5gn24")
+
+[node name="Asteroid5" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(395, 904)
+data = ExtResource("7_8agse")
+
+[node name="Asteroid12" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(2339, 7247)
+data = ExtResource("7_8agse")
+
+[node name="Asteroid13" parent="Asteroids" instance=ExtResource("2_isa1j")]
+position = Vector2(-2167, 6927)
+data = ExtResource("7_8agse")
+
+[node name="Orin" parent="." node_paths=PackedStringArray("dialogue_panel") instance=ExtResource("8_fqnu4")]
+position = Vector2(647, 2066)
+dialogue_panel = NodePath("../HUD/VBoxContainer/MarginContainer/DialoguePanel")
+dialogue_script = ExtResource("9_a1ot8")
+
+[node name="Xatar" parent="." node_paths=PackedStringArray("dialogue_panel") instance=ExtResource("8_fqnu4")]
+position = Vector2(1760, 3306)
+dialogue_panel = NodePath("../HUD/VBoxContainer/MarginContainer/DialoguePanel")
+dialogue_script = ExtResource("10_ee01e")
+
+[node name="Lexa" parent="." node_paths=PackedStringArray("dialogue_panel") instance=ExtResource("8_fqnu4")]
+position = Vector2(916, 4253)
+dialogue_panel = NodePath("../HUD/VBoxContainer/MarginContainer/DialoguePanel")
+dialogue_script = ExtResource("11_fs2qa")
+
+[node name="Raez" parent="." node_paths=PackedStringArray("dialogue_panel") instance=ExtResource("8_fqnu4")]
+position = Vector2(1064, 5175)
+dialogue_panel = NodePath("../HUD/VBoxContainer/MarginContainer/DialoguePanel")
+dialogue_script = ExtResource("12_5kpwv")
+
+[node name="AsteroidHub" parent="." instance=ExtResource("13_0ly4n")]
+position = Vector2(1329, 4028)
+
+[node name="Player" parent="." instance=ExtResource("14_1xtwa")]
+position = Vector2(1746, 1873)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+update_rotation = false
+update_scale = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1746, 1873)
+
+[node name="HUD" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_1xi25")]
+player = NodePath("../Player")
+
+[editable path="HUD"]

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://djn7ytplux8hj"]
-
-[ext_resource type="Script" path="res://data/items/item_data.gd" id="1_0hshh"]
-[ext_resource type="Texture2D" uid="uid://yixy7n8n6e0b" path="res://data/items/gems/ruby/ruby.svg" id="2_rbl43"]
-
-[resource]
-script = ExtResource("1_0hshh")
-name = "Ruby"
-sprite = ExtResource("2_rbl43")

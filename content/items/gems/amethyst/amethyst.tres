@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://ddplnk38g0glo"]
+
+[ext_resource type="Script" path="res://content/items/item_data.gd" id="1_yowot"]
+[ext_resource type="Texture2D" uid="uid://b2yb1y1rk16q4" path="res://content/items/gems/amethyst/amethyst.svg" id="2_sct8k"]
+
+[resource]
+script = ExtResource("1_yowot")
+name = "Amethyst"
+sprite = ExtResource("2_sct8k")

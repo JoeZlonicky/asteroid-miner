@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2if4ubt3lh8"]
 
-[ext_resource type="Texture2D" uid="uid://bu0a4m4qia66f" path="res://data/deposits/cobalt_deposit/cobalt_deposit.svg" id="1_1wusx"]
+[ext_resource type="Texture2D" uid="uid://bu0a4m4qia66f" path="res://content/deposits/cobalt_deposit/cobalt_deposit.svg" id="1_1wusx"]
 
 [node name="CollisionShapeEditor" type="StaticBody2D"]
 

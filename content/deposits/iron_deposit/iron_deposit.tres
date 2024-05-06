@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DepositData" load_steps=4 format=3 uid="uid://my5l01dr58ol"]
+
+[ext_resource type="Resource" uid="uid://c8dfn00b7alss" path="res://content/items/ores/iron/iron.tres" id="1_i1f0c"]
+[ext_resource type="Script" path="res://content/deposits/deposit_data.gd" id="1_xxd8e"]
+[ext_resource type="Texture2D" uid="uid://dfox6f4eovec2" path="res://content/deposits/iron_deposit/iron_deposit.svg" id="2_x53oa"]
+
+[resource]
+script = ExtResource("1_xxd8e")
+sprite = ExtResource("2_x53oa")
+collision = PackedVector2Array(-29, -44, -2, -60, 26, -40, 63, -37, 65, -8, 83, 10, 65, 44, -41, 60, -84, -5, -64, -34, -38, -32)
+gem_chance = 0.0
+ore_drop = ExtResource("1_i1f0c")
+n_ore_drops = 5
+n_gem_drops = 1

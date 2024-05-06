@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DepositData" load_steps=5 format=3 uid="uid://3xvoub0bf81v"]
+
+[ext_resource type="Script" path="res://content/deposits/deposit_data.gd" id="1_agved"]
+[ext_resource type="Resource" uid="uid://c56gx3byk713s" path="res://content/items/gems/sapphire/sapphire.tres" id="1_vcobw"]
+[ext_resource type="Resource" uid="uid://bau71eukom6we" path="res://content/items/ores/cobalt/cobalt.tres" id="2_kvsuu"]
+[ext_resource type="Texture2D" uid="uid://bu0a4m4qia66f" path="res://content/deposits/cobalt_deposit/cobalt_deposit.svg" id="2_tc1x4"]
+
+[resource]
+script = ExtResource("1_agved")
+sprite = ExtResource("2_tc1x4")
+collision = PackedVector2Array(-22, -58, 7, -56, 65, -39, 76, -20, 84, 24, 58, 52, -49, 69, -91, 5, -86, -31, -60, -41)
+gem_chance = 0.0
+ore_drop = ExtResource("2_kvsuu")
+gem_drop = ExtResource("1_vcobw")
+n_ore_drops = 5
+n_gem_drops = 1

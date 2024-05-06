@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b824pcuy6a6l3"]
+
+[ext_resource type="Script" path="res://content/items/item_data.gd" id="1_wlmvj"]
+[ext_resource type="Texture2D" uid="uid://chebfjv526vyv" path="res://content/items/ores/iridium/iridium.svg" id="2_pkov7"]
+
+[resource]
+script = ExtResource("1_wlmvj")
+name = "Iridium"
+sprite = ExtResource("2_pkov7")
