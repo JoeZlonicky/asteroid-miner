@@ -43,7 +43,6 @@ folder_colors={
 "res://common/": "orange",
 "res://components/": "yellow",
 "res://content/": "green",
-"res://content/levels/": "purple",
 "res://dev/": "teal",
 "res://entities/": "blue",
 "res://global/": "purple",
