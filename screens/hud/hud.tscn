@@ -60,3 +60,5 @@ theme_override_constants/margin_bottom = 32
 [node name="DialoguePanel" parent="VBoxContainer/MarginContainer" instance=ExtResource("5_i2o44")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[connection signal="started" from="VBoxContainer/MarginContainer/DialoguePanel" to="." method="_on_dialogue_panel_started"]

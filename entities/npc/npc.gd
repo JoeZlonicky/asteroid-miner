@@ -1,10 +1,15 @@
 class_name NPC
 extends Node2D
 
-signal dialogue_started(data: DialogueData)
+@export var dialogue_panel: DialoguePanel = null
+@export var dialogue_script: GDScript = null
 
-@export var dialogue_data: DialogueData
+var _dialogue: DialogueLogic = null
+
+
+func _ready() -> void:
+	_dialogue = dialogue_script.new()
 
 
 func _on_interactable_area_interacted_with() -> void:
-	dialogue_started.emit(dialogue_data)
+	_dialogue.logic(null, dialogue_panel)

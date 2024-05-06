@@ -2,10 +2,9 @@ class_name DialoguePanel
 extends PanelContainer
 
 
+signal started
+signal next_triggered
 signal finished
-
-var dialogue: DialogueData = null
-var page_i: int = 0
 
 @onready var text_label: Label = %TextLabel
 @onready var name_container: PanelContainer = %NameContainer
@@ -17,42 +16,36 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not visible or not event.is_action_pressed("interact"):
 		return
 	
-	next()
+	_next()
 	get_viewport().set_input_as_handled()
 
 
-func start(new_dialogue: DialogueData) -> void:
-	if dialogue == new_dialogue:
-		return
-	
-	dialogue = new_dialogue
-	page_i = -1
-	new_page()
-	
-	name_label.text = dialogue.character_name
-	name_container.visible = name_label.text.length() > 0
+func start(character_name: String = "") -> void:
+	text_label.visible_characters = 0
+	name_label.text = character_name
+	name_container.visible = character_name.length() > 0
 	show()
+	started.emit()
 
 
-func next() -> void:
+func display_text(text: String) -> void:
+	text_label.text = text
+	text_label.visible_characters = 0
+	visible_characters_tick.start()
+	await next_triggered
+
+
+func finish() -> void:
+	finished.emit()
+	hide()
+
+
+func _next() -> void:
 	if text_label.visible_characters < text_label.text.length():
 		text_label.visible_characters = text_label.text.length()
 		return
 	
-	if page_i == dialogue.text.size() - 1:
-		dialogue = null
-		hide()
-		finished.emit()
-		return
-	
-	new_page()
-
-
-func new_page() -> void:
-	page_i += 1
-	text_label.text = dialogue.text[page_i]
-	text_label.visible_characters = 0
-	visible_characters_tick.start()
+	next_triggered.emit()
 
 
 func _on_visible_characters_tick_timeout() -> void:

@@ -31,10 +31,7 @@ func _physics_process(_delta: float) -> void:
 	speed_label.update_text(player.linear_velocity.length())
 
 
-func start_dialogue(dialogue: DialogueData) -> void:
-	inventory_panel.hide()
-	dialogue_panel.start(dialogue)
-	
+func _on_dialogue_panel_started() -> void:
 	player.preoccupied = true
 	await dialogue_panel.finished
 	player.preoccupied = false

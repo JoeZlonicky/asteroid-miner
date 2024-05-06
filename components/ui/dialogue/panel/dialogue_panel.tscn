@@ -57,7 +57,7 @@ text = "Hello world"
 autowrap_mode = 3
 visible_characters = 0
 visible_characters_behavior = 1
-visible_ratio = -0.0126582
+visible_ratio = 0.0
 
 [node name="Options" type="VBoxContainer" parent="MarginContainer/Sections"]
 layout_mode = 2
