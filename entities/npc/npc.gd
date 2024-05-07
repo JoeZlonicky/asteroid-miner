@@ -3,6 +3,7 @@ extends Node2D
 
 @export var dialogue_panel: DialoguePanel = null
 @export var dialogue_script: GDScript = null
+@export var player: Player = null
 
 var _dialogue: DialogueLogic = null
 
@@ -12,4 +13,4 @@ func _ready() -> void:
 
 
 func _on_interactable_area_interacted_with() -> void:
-	_dialogue.logic(null, dialogue_panel)
+	_dialogue.logic(player, dialogue_panel)

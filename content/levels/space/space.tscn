@@ -86,25 +86,29 @@ data = ExtResource("7_8agse")
 position = Vector2(-2167, 6927)
 data = ExtResource("7_8agse")
 
-[node name="Orin" parent="." node_paths=PackedStringArray("dialogue_panel") instance=ExtResource("8_fqnu4")]
+[node name="Orin" parent="." node_paths=PackedStringArray("dialogue_panel", "player") instance=ExtResource("8_fqnu4")]
 position = Vector2(647, 2066)
 dialogue_panel = NodePath("../HUD/VBoxContainer/MarginContainer/DialoguePanel")
 dialogue_script = ExtResource("9_a1ot8")
+player = NodePath("../Player")
 
-[node name="Xatar" parent="." node_paths=PackedStringArray("dialogue_panel") instance=ExtResource("8_fqnu4")]
+[node name="Xatar" parent="." node_paths=PackedStringArray("dialogue_panel", "player") instance=ExtResource("8_fqnu4")]
 position = Vector2(1760, 3306)
 dialogue_panel = NodePath("../HUD/VBoxContainer/MarginContainer/DialoguePanel")
 dialogue_script = ExtResource("10_ee01e")
+player = NodePath("../Player")
 
-[node name="Lexa" parent="." node_paths=PackedStringArray("dialogue_panel") instance=ExtResource("8_fqnu4")]
+[node name="Lexa" parent="." node_paths=PackedStringArray("dialogue_panel", "player") instance=ExtResource("8_fqnu4")]
 position = Vector2(916, 4253)
 dialogue_panel = NodePath("../HUD/VBoxContainer/MarginContainer/DialoguePanel")
 dialogue_script = ExtResource("11_fs2qa")
+player = NodePath("../Player")
 
-[node name="Raez" parent="." node_paths=PackedStringArray("dialogue_panel") instance=ExtResource("8_fqnu4")]
+[node name="Raez" parent="." node_paths=PackedStringArray("dialogue_panel", "player") instance=ExtResource("8_fqnu4")]
 position = Vector2(1064, 5175)
 dialogue_panel = NodePath("../HUD/VBoxContainer/MarginContainer/DialoguePanel")
 dialogue_script = ExtResource("12_5kpwv")
+player = NodePath("../Player")
 
 [node name="AsteroidHub" parent="." instance=ExtResource("13_0ly4n")]
 position = Vector2(1329, 4028)
